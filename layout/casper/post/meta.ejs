@@ -4,8 +4,8 @@
   </time>
   <% if (post.tags && post.tags.length){ %>
   <% count = post.tags.length %>
-  on <% post.tags.forEach(function(tag, index) { %>
-  <a href='<%= url_for(tag.path) %>'><%= tag.name %></a><% if (count !== index+1) { %>,<% } %>
+  <% post.tags.forEach(function(tag, index) { %>
+  <a href='<%= url_for(tag.path) %>'><%= tag.name %></a><% if (count !== index+1) { %> <% } %>
   <% }); %>
   <% } %>
 </section>

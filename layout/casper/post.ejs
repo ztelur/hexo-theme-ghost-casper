@@ -8,9 +8,9 @@
     </header>
     <section class="post-content" itemprop="description articleBody">
       <%- partial('post/gallery', {post: post}) %>
-      <% if (date(post.date, null) !== date(post.updated, null)) {%>
+      <!-- <% if (date(post.date, null) !== date(post.updated, null)) {%>
       <%- partial('post/update', {post:post}) %>
-      <% } %>
+      <% } %> -->
       <%- post.content %>
     </section>
     <footer class="post-footer">

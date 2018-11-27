@@ -10,14 +10,21 @@ social:
   google+: https://plus.google.com/**profile**
   github: https://github.com/**profile**
 
+
+image: 'assets/images/draven.png'
+image_url: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543337069412&di=609213db44c3240a091b26f82707da85&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F65b2fd9d9a84c14f4a712ed0d71b0fbb67dcbf2d.jpg'
+
+baseurl: /
+  
+
 #opengraph
 twitter_profile: 
 googleplus_profile: 
 fb_admins:
 fb_app_id:
 
-fancybox:
-fitvids:
+fancybox: true
+fitvids: true
 
 excerpt_link: Read More
 

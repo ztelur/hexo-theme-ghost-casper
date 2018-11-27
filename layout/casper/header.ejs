@@ -2,7 +2,8 @@
     <nav class="main-nav <% if (!page.title || page.cover) { %>overlay<% } %> clearfix">
         <% if (!page.title) { %><a class="blog-logo" href="<%- config.root %>"><%- theme.title %></a><% } %>
         <% if (page.title) { %><a class="back-button icon-arrow-left" href="<%- config.root %>">Home</a><% } %>
-        <% if (config.rss || config.feed || theme.rss || theme.feed) {  %><a class="subscribe-button icon-feed" href="<%- theme.rss %>">Subscribe</a><% } %>
+        <!-- <% if (config.rss || config.feed || theme.rss || theme.feed) {  %><a class="subscribe-button icon-feed" href="<%- theme.rss %>">Subscribe</a><% } %> -->
+        <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
     </nav>
     <% if (!page.title) { %>
     <div class="vertical">
