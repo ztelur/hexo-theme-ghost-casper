@@ -23,17 +23,22 @@
       如果对本文 <a href="<%= page.permalink %>"><%= page.title %></a> 的内容有疑问，请在下面的评论系统中留言，谢谢。
 
       <blockquote>
-        <p>原文链接：<a href="<%= page.permalink %>"><%= page.title %> · <%= site.name %></a></p>
+        <p>原文链接：<a href="<%= page.permalink %>"><%= page.title %></a></p>
 
         <p>Follow: <a href="https://github.com/ztelur">Ztelur · GitHub</a></p>
       </blockquote>
 
     </section>
     <footer class="post-footer">
+     <% if (post.author || config.author ) { %>
+        <figure class="author-image">
+          <a class="img" href="https://github.com/ztelur" style="background-image: url(<%- theme.image_url%>)"><span class="hidden"><%= post.author || config.author %>'s Picture</span></a>
+        </figure>
+     <% } %>
       <%- partial('post/author', {post: post}) %>
-      <%- partial('post/share') %>
+      <!--<%- partial('post/share') %>-->
+      <%- partial('post/comments') %>
     </footer>
   </article>
-  <%- partial('post/comments') %>
-  <%- partial('post/navigation') %>
 </main>
+<%- partial('post/navigation') %>

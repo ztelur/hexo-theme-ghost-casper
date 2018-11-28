@@ -6,9 +6,11 @@
 <% } else { %>
 <body class="post-template">
 <% } %>
+  <div class="site-wrapper">
   <%- partial('casper/header') %>
   <%- body %>
   <%- partial('casper/footer') %>
+  </div>
   <%- partial('casper/after_all') %>
 </body>
 </html>

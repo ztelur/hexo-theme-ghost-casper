@@ -1,7 +1,7 @@
 <aside class="read-next">
-  <% if (page.next) { %>
-    <% if (oage.next.cover) { %>
-      <a class="read-next-story" style="background-image:<%= url_for(page.next.cover)" href="<%= url_for(page.next.path) %>">
+ <% if (page.next) { %>
+    <% if (page.next.cover) { %>
+      <a class="read-next-story" style="background-image: url(<%- page.next.cover%>)" href="<%= url_for(page.next.path) %>">
         <section class="post">
           <h2><%= page.next.title %></h2>
           <p>
@@ -29,13 +29,11 @@
     </a>
     <% } %>
   <% } %>
-  
-  <!-- [[! /next_post ]] -->
-  <!-- [[! prev_post ]] -->
+
 
   <% if (page.prev) { %>
-    <% if (oage.prev.cover) { %>
-      <a class="read-next-story" style="background-image:<%= url_for(page.prev.cover)" href="<%= url_for(page.prev.path) %>">
+    <% if (page.prev.cover) { %>
+      <a class="read-next-story" style="background-image: url(<%- page.prev.cover%>)" href="<%= url_for(page.prev.path) %>">
         <section class="post">
           <h2><%= page.prev.title %></h2>
           <p>
@@ -63,5 +61,4 @@
     </a>
     <% } %>
   <% } %>
-  <!-- [[! /prev_post ]] -->
 </aside>
