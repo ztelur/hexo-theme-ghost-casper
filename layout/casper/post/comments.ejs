@@ -1,8 +1,20 @@
-<% if(config.disqus_shortname) { %>
-<div id="comment" class="comments-area">
-    <h2 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h2>
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-    <% } %>
-</div>
+
+ <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+    clientID: '9347af410c07624ec3e6',
+    clientSecret: '578667b93387d410574122685243499f1b546ba7',
+    repo: 'blog-comments',
+    owner: 'ztelur',
+    admin: ['ztelur'],
+    // labels: ['Gitalk', 'gitment'].concat(["{{ page.tags | join: '","'}}"]),
+    // id: location.origin + location.pathname,
+    id: "<%= page.permalink %>",
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+});
+
+gitalk.render('gitalk-container')
+</script>

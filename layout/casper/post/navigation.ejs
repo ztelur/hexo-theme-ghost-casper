@@ -1,13 +1,67 @@
-<nav class="pagination" role="pagination">
-  <% if (page.prev) { %>
-  <a class="newer-posts" href="<%- url_for(page.prev.path) %>" title="<%- page.prev.title %>">
-    ← Newer Post
-  </a>
-  <% } %>
-  <span class="page-number">•</span>
+<aside class="read-next">
   <% if (page.next) { %>
-  <a class="older-posts" href="<%- url_for(page.next.path) %>" title="<%- page.next.title %>">
-      Older Post →
-  </a>
+    <% if (oage.next.cover) { %>
+      <a class="read-next-story" style="background-image:<%= url_for(page.next.cover)" href="<%= url_for(page.next.path) %>">
+        <section class="post">
+          <h2><%= page.next.title %></h2>
+          <p>
+            <% if (page.next.excerpt){ %>
+              <%- page.next.excerpt %>
+            <% } else { %>
+              <%- page.next.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %> ......
+            <% } %>
+          </p>
+        </section>
+      </a>
+
+    <% } else { %>
+    <a class="read-next-story no-cover" href="<%= url_for(page.next.path) %>">
+      <section class="post">
+        <h2><%= page.next.title %></h2>
+        <p>
+            <% if (page.next.excerpt){ %>
+              <%- page.next.excerpt %>
+            <% } else { %>
+              <%- page.next.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %> ......
+            <% } %>
+          </p>
+      </section>
+    </a>
+    <% } %>
   <% } %>
-</nav>
+  
+  <!-- [[! /next_post ]] -->
+  <!-- [[! prev_post ]] -->
+
+  <% if (page.prev) { %>
+    <% if (oage.prev.cover) { %>
+      <a class="read-next-story" style="background-image:<%= url_for(page.prev.cover)" href="<%= url_for(page.prev.path) %>">
+        <section class="post">
+          <h2><%= page.prev.title %></h2>
+          <p>
+            <% if (page.prev.excerpt){ %>
+              <%- page.prev.excerpt %>
+            <% } else { %>
+              <%- page.prev.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %> ......
+            <% } %>
+          </p>
+        </section>
+      </a>
+
+    <% } else { %>
+    <a class="read-next-story no-cover" href="<%= url_for(page.prev.path) %>">
+      <section class="post">
+        <h2><%= page.prev.title %></h2>
+        <p>
+            <% if (page.prev.excerpt){ %>
+              <%- page.prev.excerpt %>
+            <% } else { %>
+              <%- page.prev.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %> ......
+            <% } %>
+          </p>
+      </section>
+    </a>
+    <% } %>
+  <% } %>
+  <!-- [[! /prev_post ]] -->
+</aside>
