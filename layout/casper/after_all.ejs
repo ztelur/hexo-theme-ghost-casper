@@ -1,8 +1,10 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="<%- config.root%>js/jquery-2.0.3.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-2.0.3.min.js"><\/script>')</script>
 <% if (theme.fitvids || page.fitvids){ %>
 <script type="text/javascript" src="<%- config.root%>js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="<%- config.root%>js/prism.js"></script>
+<script type="text/javascript" src="<%- config.root%>js/toc.js"></script>
+
 <script type="text/javascript">
 (function($){
   var $postContent = $(".post-content");
@@ -51,3 +53,30 @@
     }());
 </script>
 <% } %>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f089a91a688633df563c08899e3d893e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+

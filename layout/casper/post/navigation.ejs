@@ -15,7 +15,7 @@
       </a>
 
     <% } else { %>
-    <a class="read-next-story no-cover" href="<%= url_for(page.next.path) %>">
+    <a class="read-next-story no-cover" href="<%= url_for(page.next.permalink) %>">
       <section class="post">
         <h2><%= page.next.title %></h2>
         <p>
@@ -47,7 +47,7 @@
       </a>
 
     <% } else { %>
-    <a class="read-next-story no-cover" href="<%= url_for(page.prev.path) %>">
+    <a class="read-next-story no-cover" href="<%= url_for(page.prev.permalink) %>">
       <section class="post">
         <h2><%= page.prev.title %></h2>
         <p>
